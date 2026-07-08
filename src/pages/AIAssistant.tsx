@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Send, Bot, User, Sparkles, TrendingUp, TrendingDown, PiggyBank, AlertTriangle, Target, ArrowUpRight, ArrowDownRight, Lightbulb, BarChart3 } from 'lucide-react';
+import { Send, Bot, User, Sparkles, TrendingUp, PiggyBank, AlertTriangle, Target, ArrowUpRight, ArrowDownRight, Lightbulb, BarChart3 } from 'lucide-react';
 import { useData } from '../context/DataContext';
 import { useAuth } from '../context/AuthContext';
 import { generateGeminiResponse } from '../services/gemini';
@@ -82,7 +82,7 @@ function analyzeFinances(transactions: any[], budgets: any[]): FinancialAnalysis
 // ─── Smart Response Engine ──────────────────────────────────────
 // Matches user questions to relevant financial analysis
 
-function generateSmartResponse(question: string, analysis: FinancialAnalysis, userName: string): string {
+function _generateSmartResponse(question: string, analysis: FinancialAnalysis, userName: string): string {
   const q = question.toLowerCase().trim();
 
   // No data scenario

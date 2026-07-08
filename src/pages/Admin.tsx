@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Navigate } from 'react-router-dom';
-import { Shield, Users, Building, Activity, ShieldCheck } from 'lucide-react';
+import { Users, Building, Activity, ShieldCheck } from 'lucide-react';
 import { getAdminStats } from '../services/api';
 
 export const Admin: React.FC = () => {

@@ -4,8 +4,7 @@ import {
   signOut,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  updateProfile,
-  sendPasswordResetEmail
+  updateProfile
 } from 'firebase/auth';
 import { doc, getDoc, setDoc, collection, updateDoc } from 'firebase/firestore';
 import { auth, db } from '../config/firebase';
@@ -162,8 +161,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  const resetPassword = async (_email: string) => {
+    // TODO: implement password reset
+  };
+
   return (
-    <AuthContext.Provider value={{ currentUser, loading, login, signup, joinFamily, logout }}>
+    <AuthContext.Provider value={{ currentUser, loading, login, signup, joinFamily, logout, resetPassword }}>
       {children}
     </AuthContext.Provider>
   );

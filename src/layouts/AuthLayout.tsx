@@ -5,7 +5,6 @@ import { TrendingUp, Shield, Users, Wallet } from 'lucide-react';
 
 export const AuthLayout: React.FC = () => {
   const location = useLocation();
-  const isLogin = location.pathname === '/login';
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-slate-50 dark:bg-slate-950 transition-colors duration-200">
