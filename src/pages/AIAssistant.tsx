@@ -82,6 +82,7 @@ function analyzeFinances(transactions: any[], budgets: any[]): FinancialAnalysis
 // ─── Smart Response Engine ──────────────────────────────────────
 // Matches user questions to relevant financial analysis
 
+// @ts-ignore: Kept as offline fallback for Gemini
 function _generateSmartResponse(question: string, analysis: FinancialAnalysis, userName: string): string {
   const q = question.toLowerCase().trim();
 

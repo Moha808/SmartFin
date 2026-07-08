@@ -1,10 +1,9 @@
 import React from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TrendingUp, Shield, Users, Wallet } from 'lucide-react';
 
 export const AuthLayout: React.FC = () => {
-  const location = useLocation();
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-slate-50 dark:bg-slate-950 transition-colors duration-200">
