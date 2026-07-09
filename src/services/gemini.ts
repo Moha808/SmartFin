@@ -5,8 +5,8 @@ const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 // Only initialize if we have a key
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 
-// We use the universally supported pro model
-const model = genAI ? genAI.getGenerativeModel({ model: "gemini-pro" }) : null;
+// We use the modern, fast model available in 2026
+const model = genAI ? genAI.getGenerativeModel({ model: "gemini-2.5-flash" }) : null;
 
 export async function generateGeminiResponse(
   question: string,
