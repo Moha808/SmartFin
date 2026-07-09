@@ -348,9 +348,9 @@ export const AIAssistant: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 h-[calc(100vh-8rem)]">
+    <div className="flex flex-col lg:flex-row gap-6 h-auto lg:h-[calc(100vh-8rem)]">
       {/* Chat Area */}
-      <div className="flex-1 card flex flex-col p-0 overflow-hidden border-finance/20 dark:border-slate-800 shadow-md dark:bg-slate-900">
+      <div className="flex-1 card flex flex-col p-0 overflow-hidden border-finance/20 dark:border-slate-800 shadow-md dark:bg-slate-900 min-h-[500px] lg:min-h-0">
         <div className="p-4 border-b border-slate-100 dark:border-slate-800 bg-gradient-to-r from-finance/5 to-emerald-50/50 dark:from-finance/10 dark:to-emerald-950/20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-finance to-emerald-500 flex items-center justify-center shadow-sm shadow-finance/30">
@@ -428,7 +428,7 @@ export const AIAssistant: React.FC = () => {
       </div>
  
       {/* Sidebar */}
-      <div className="w-full lg:w-80 flex flex-col gap-6 overflow-y-auto pr-2 pb-2 custom-scrollbar">
+      <div className="w-full lg:w-80 flex flex-col gap-6 lg:overflow-y-auto pr-0 lg:pr-2 pb-6 lg:pb-2 custom-scrollbar">
         {/* Proactive Insights */}
         <div className="card bg-gradient-to-br from-slate-800 to-slate-900 text-white border-none flex-shrink-0">
           <div className="flex items-center gap-2 mb-4">

@@ -5,16 +5,16 @@ const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 // Only initialize if we have a key
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 
-// We use the universally supported pro model as fallback
-const model = genAI ? genAI.getGenerativeModel({ model: "gemini-pro" }) : null;
+// We use the modern, fast model
+const model = genAI ? genAI.getGenerativeModel({ model: "gemini-1.5-flash" }) : null;
 
 export async function generateGeminiResponse(
   question: string,
   financialData: any,
   userName: string
 ): Promise<string> {
-  if (!model) {
-    return "Error: Gemini API key is missing. Please add VITE_GEMINI_API_KEY to your .env file.";
+  if (!apiKey || !model) {
+    return "Error: Gemini API key is missing. If you're on Vercel, please add `VITE_GEMINI_API_KEY` to your Vercel Environment Variables. The AI feature won't work without it!";
   }
 
   // Construct a comprehensive system prompt with the user's data
